@@ -1,0 +1,9 @@
+version: '3'
+services:
+  flutter-linux-image:
+    image: ${LINUX_IMAGE}
+    build:
+      context: .
+      args:
+        BASE_IMAGE: ${BASE_IMAGE}
+    tty: true

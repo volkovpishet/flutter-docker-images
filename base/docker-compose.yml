@@ -1,0 +1,10 @@
+version: '3'
+services:
+  flutter-base-image:
+    image: ${BASE_IMAGE}
+    build:
+      context: .
+      args:
+        BASE_ANDROID_SDK_IMAGE: ${BASE_ANDROID_SDK_IMAGE}
+        FLUTTER_VERSION: ${FLUTTER_VERSION}
+    tty: true
