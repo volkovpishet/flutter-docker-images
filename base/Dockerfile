@@ -6,13 +6,13 @@ FROM $BASE_ANDROID_SDK_IMAGE
 # Should match project flutter version
 ARG FLUTTER_VERSION
 
+USER root
 RUN apt-get update
-RUN apt-get  install -y --no-install-recommends apt-transport-https gpg-agent
+RUN apt-get  install -y --no-install-recommends apt-transport-https gpg-agent xvfb x11-utils
 RUN sh -c 'wget -qO- https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -'
 RUN sh -c 'wget -qO- https://storage.googleapis.com/download.dartlang.org/linux/debian/dart_stable.list > /etc/apt/sources.list.d/dart_stable.list'
-
 RUN apt-get update
-RUN apt-get install -y --no-install-recommends dart xvfb x11-utils
+RUN apt-get install -y --no-install-recommends dart
 
 ENV HOME="/root"
 ENV PATH="/usr/lib/dart/bin:$PATH"
