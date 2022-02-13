@@ -3,7 +3,7 @@
 run-xvfb;
 
 adb start-server;
-/bin/bash emulator -avd emuTest -no-skin -no-audio -no-window
+flutter emulators --launch emuTest;
 
 # Wait for emulator to boot
 echo "Waiting for emulator to launch..."
