@@ -6,5 +6,6 @@
 *.ipr
 *.iws
 .idea/
+.vscode/
 
 .env
