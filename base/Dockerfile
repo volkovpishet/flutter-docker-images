@@ -19,7 +19,7 @@ ENV HOME="/root"
 ENV PATH="/usr/lib/dart/bin:$PATH"
 
 # Install fvm and prepare environment
-RUN pub global activate fvm
+RUN dart pub global activate fvm
 ENV PATH="$HOME/.pub-cache/bin:$PATH"
 RUN fvm install ${FLUTTER_VERSION}
 RUN fvm global ${FLUTTER_VERSION}
