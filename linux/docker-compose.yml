@@ -6,4 +6,5 @@ services:
       context: .
       args:
         BASE_IMAGE: ${BASE_IMAGE}
+        ADDIONAL_LUNUX_IMAGE_PACKAGES: ${ADDIONAL_LUNUX_IMAGE_PACKAGES}
     tty: true
